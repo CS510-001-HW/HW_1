@@ -3,9 +3,8 @@ name: Python application
 on: 
   push:
     paths:
-      - 'HW1/**'
+      - 'HW2/**'
     branches: ["main"]
-
 
 jobs:
   build:
@@ -22,4 +21,4 @@ jobs:
         pip install pytest
     - name: Run tests
       run: |
-        pytest HW1/test/*
+        pytest HW2/test/*
