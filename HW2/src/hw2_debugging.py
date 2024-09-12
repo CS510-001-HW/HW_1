@@ -11,7 +11,7 @@ Functions:
 """
 
 
-from src.rand import random_array
+from rand import random_array
 
 
 def merge_sort(arr):
