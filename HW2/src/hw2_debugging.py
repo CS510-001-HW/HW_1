@@ -9,9 +9,18 @@ Functions:
 - merge_sort(arr): Sorts the input array using the merge sort algorithm.
 - recombine(left_arr, right_arr): Merges two sorted arrays into one.
 """
+import subprocess
+def random_array(arr):
+    for i, _ in enumerate(arr):
+        try:
+            shuffled_num = subprocess.run(
+             ["shuf", "-i1-20", "-n1"], capture_output=True, check=True)
+            arr[i] = int(shuffled_num.stdout)
+        except subprocess.CalledProcessError as e:
+            print(f"Error occurred: {e}")
+            arr[i] = None
+    return arr
 
-
-from rand import random_array
 
 
 def merge_sort(arr):
