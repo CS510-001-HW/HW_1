@@ -1,4 +1,4 @@
-<h2 align="center">Homework 1</h2>
+<h2 align="center">Homework 2</h2>
 
 ![AutoPep8](https://img.shields.io/badge/code%20style-autopep8-brightgreen)
 ![pylint](https://img.shields.io/badge/linter-pylint-yellow)
