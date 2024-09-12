@@ -1,3 +1,0 @@
-HW_1/HW1/src/main.py:10:1: E302 expected 2 blank lines, found 0
-HW_1/HW1/test/test1.py:3:1: E302 expected 2 blank lines, found 1
-HW_1/HW1/test/test2.py:3:1: E302 expected 2 blank lines, found 1
