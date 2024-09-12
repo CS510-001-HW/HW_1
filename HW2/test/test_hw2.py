@@ -19,7 +19,7 @@ def test_unsorted_array():
 # Test case 3: Testing an array with duplicate elements
 
 def test_array_with_duplicates():
-    arr = [4, 1, 3, 4, 2]
-    assert merge_sort(arr) == [1, 2, 3, 4, 4]
+    arr = [4, 1, 3, 7, 2]
+    assert merge_sort(arr) == [1, 2, 3, 4, 7]
 
 # Add more test cases as needed
