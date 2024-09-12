@@ -1,0 +1,36 @@
+name: Python Code Quality Check
+
+on: [push, pull_request]
+
+jobs:
+  lint_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        
+    - name: Install dependencies
+      run: |
+        pip install autopep8 pylint flake8 pytest
+        
+    - name: Run AutoPep8
+      run: |
+        autopep8 --in-place --aggressive --aggressive *.py
+        
+    - name: Run pylint
+      run: |
+        pylint *.py
+        
+    - name: Run flake8
+      run: |
+        flake8 *.py
+        
+    - name: Run pytest
+      run: |
+        pytest
