@@ -32,7 +32,7 @@ jobs:
     # Step 7: Run pylint and save output to post_traces
     - name: Run pylint for HW1
       run: |
-        pylint HW_1/HW1/**/*.py > HW_1/HW2/post_traces/pylint_hw1_trace.txt || true
+        pylint HW1/**/*.py > HW_1/HW2/post_traces/pylint_hw1_trace.txt || true
 
     # Step 8: Run flake8 and save output to post_traces
     - name: Run flake8 for HW1

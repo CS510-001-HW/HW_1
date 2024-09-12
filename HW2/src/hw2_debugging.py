@@ -3,7 +3,7 @@ hw2_debugging.py
 
 This module contains an implementation of the merge_sort algorithm,
 which is used to sort an array. It also utilizes helper functions
-from the `rand` module to generate random arrays..
+from the `rand` module to generate random arrays.
 
 Functions:
 - merge_sort(arr): Sorts the input array using the merge sort algorithm.
