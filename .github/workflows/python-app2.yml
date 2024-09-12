@@ -18,7 +18,7 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
-        pip install pytest
+        pip install pytest pylint flake8 autopep8
     - name: Run tests
       run: |
         pytest HW2/test/*

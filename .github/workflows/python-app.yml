@@ -19,11 +19,12 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
-        pip install pytest
+        pip install pytest pylint flake8 autopep8
     - name: Run tests
       run: |
         pytest HW1/test/*
     # Step 4: Run AutoPep8 on both HW1 and HW2 to format the code
+    
     - name: Run AutoPep8 for HW1 and HW2
       run: |
         autopep8 --in-place --aggressive --aggressive HW1/**/*.py
