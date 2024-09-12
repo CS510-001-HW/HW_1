@@ -12,4 +12,4 @@ def add(x, y):
     add() function
     This function adds 2 numbers
     """
-    return x - y
+    return x + y
