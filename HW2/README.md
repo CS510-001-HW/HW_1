@@ -1,7 +1,8 @@
 <h2 align="center">Homework 1</h2>
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/:packageName)
+![AutoPep8](https://img.shields.io/badge/code%20style-autopep8-brightgreen)
 ![pylint](https://img.shields.io/badge/linter-pylint-yellow)
+![flake8](https://img.shields.io/badge/linter-flake8-blue)
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
