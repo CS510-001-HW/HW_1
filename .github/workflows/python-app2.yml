@@ -1,5 +1,6 @@
 name: Python application
-
+permissions:
+  contents: write
 on: 
   push:
     paths:
