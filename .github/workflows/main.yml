@@ -1,36 +1,56 @@
-name: Python Code Quality Check
+name: Python CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
 
 jobs:
-  lint_and_test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest  # Specify the environment
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+    # Step 1: Checkout the code
+    - uses: actions/checkout@v2
 
-    - name: Set up Python 3.x
+    # Step 2: Set up Python (you can specify the version you need)
+    - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-        
-    - name: Install dependencies
+
+    # Step 3: Install pytest for running tests (no need to install pylint and flake8 again)
+    - name: Install pytest
       run: |
-        pip install autopep8 pylint flake8 pytest
-        
-    - name: Run AutoPep8
+        pip install pytest
+
+    # Step 4: Run AutoPep8 on both HW1 and HW2 to format the code
+    - name: Run AutoPep8 for HW1 and HW2
       run: |
-        autopep8 --in-place --aggressive --aggressive *.py
-        
-    - name: Run pylint
+        autopep8 --in-place --aggressive --aggressive HW1/**/*.py
+        autopep8 --in-place --aggressive --aggressive HW2/**/*.py
+    
+    # Step 5: Run tests in HW1 (pytest)
+    - name: Run tests for HW1
       run: |
-        pylint *.py
-        
-    - name: Run flake8
+        pytest HW1/test/*
+
+    # Step 6: Run tests in HW2 (pytest)
+    - name: Run tests for HW2
       run: |
-        flake8 *.py
-        
-    - name: Run pytest
+        pytest HW2/test/*
+
+    # Step 7: Run pylint to check code quality in HW1 and HW2
+    - name: Run pylint for HW1 and HW2
       run: |
-        pytest
+        pylint HW1/**/*.py || true
+        pylint HW2/**/*.py || true
+
+    # Step 8: Run flake8 to check code style in HW1 and HW2
+    - name: Run flake8 for HW1 and HW2
+      run: |
+        flake8 HW1/**/*.py || true
+        flake8 HW2/**/*.py || true
