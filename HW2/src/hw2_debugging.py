@@ -43,8 +43,7 @@ def merge_sort(arr):
 def recombine(left_arr, right_arr):
 
     """
-    Merges two sorted arrays into one sorted array.
-
+    Merges two sorted arrays into one sorted array
     Args:
         left_arr (list): The first sorted array.
         right_arr (list): The second sorted array.
