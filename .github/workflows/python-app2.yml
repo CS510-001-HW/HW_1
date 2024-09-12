@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: '3.x'
     - name: Install dependencies
@@ -38,12 +38,13 @@ jobs:
         flake8 HW2/**/*.py > HW2/post_traces/flake8_hw2_trace.txt || true
 
     - name: Commit pylint results
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
           git config --local user.name "ashwinramesh022"
           git config --local user.email "ashwinramesh022@users.noreply.github.com"
           git add HW2/post_traces/*
           git commit -m "trace files"
           git push
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
     
