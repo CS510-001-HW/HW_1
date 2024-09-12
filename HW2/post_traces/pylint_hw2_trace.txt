@@ -16,7 +16,18 @@ HW2/test/test_hw2.py:1:0: R0801: Similar lines in 2 files
         except subprocess.CalledProcessError as e:
             print(f"Error occurred: {e}")
             arr[i] = None
-    return arr (duplicate-code)
+    return arr
+
+
+def merge_sort(arr):
+    """
+    Sorts the input array using the merge sort algorithm.
+    Args:
+        arr (list): The array to be sorted.
+    Returns:
+        list: The sorted array.
+    """
+ (duplicate-code)
 
 -----------------------------------
 Your code has been rated at 8.93/10
