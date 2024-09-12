@@ -46,11 +46,11 @@ jobs:
     # Step 7: Run pylint to check code quality in HW1 and HW2
     - name: Run pylint for HW1 and HW2
       run: |
-        pylint HW1/**/*.py || true
-        pylint HW2/**/*.py || true
+        pylint HW1/**/*.py > HW2/post_traces/pylint_hw1_trace.txt
+        pylint HW2/**/*.py > HW2/post_traces/pylint_hw2_trace.txt
 
     # Step 8: Run flake8 to check code style in HW1 and HW2
     - name: Run flake8 for HW1 and HW2
       run: |
-        flake8 HW1/**/*.py || true
-        flake8 HW2/**/*.py || true
+        flake8 HW1/**/*.py > HW2/post_traces/flake8_hw1_trace.txt
+        flake8 HW2/**/*.py > HW2/post_traces/flake8_hw2_trace.txt
