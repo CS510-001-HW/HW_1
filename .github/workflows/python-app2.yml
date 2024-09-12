@@ -36,8 +36,14 @@ jobs:
     - name: Run flake8 for HW2
       run: |
         flake8 HW2/**/*.py > HW2/post_traces/flake8_hw2_trace.txt || true
-    - name: push to git
+
+    - name: Commit pylint results
       run: |
-        git add HW2/post_traces/*
-        git commit -m "trace files"
-        git push
+          git config --local user.name "ashwinramesh022"
+          git config --local user.email "ashwinramesh.022@gmail.com"
+          git add HW2/post_traces/*
+          git commit -m "trace files"
+          git push
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
