@@ -1,5 +1,5 @@
 
-from hw2_debugging import merge_sort
+from src.hw2_debugging import merge_sort
 print("Test file is being executed.")
 
 
