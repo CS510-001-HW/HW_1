@@ -78,3 +78,5 @@ inp_arr = random_array([None] * 20)
 arr_out = merge_sort(inp_arr)
 
 print(arr_out)
+
+
