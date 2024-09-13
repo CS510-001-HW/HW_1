@@ -49,7 +49,7 @@ def recombine(left_arr, right_arr):
 
     Returns:
         list: The merged and sorted array.
-    """
+    """ 
 
     left_index = 0
     right_index = 0
