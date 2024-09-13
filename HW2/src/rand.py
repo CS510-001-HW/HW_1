@@ -5,6 +5,7 @@ This module provides a function to generate a random array of integers
 using the `shuf` command-line utility. The function fills the given array
 with randomly shuffled numbers in the range from 1 to 20.
 
+
 Functions:
 - random_array(arr): Fills the provided array with random integers
   from 1 to 20.

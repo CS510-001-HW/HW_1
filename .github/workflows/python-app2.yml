@@ -23,10 +23,9 @@ jobs:
     - name: Run tests
       run: |
         pytest HW2/test/*
-      # Step 4: Run AutoPep8 on both HW1 and HW2 to format the code
-    - name: Run AutoPep8 for HW1 and HW2
+      # Step 4: Run AutoPep8 on HW2 to format the code
+    - name: Run AutoPep8 for HW2
       run: |
-        autopep8 --in-place --aggressive --aggressive HW1/**/*.py
         autopep8 --in-place --aggressive --aggressive HW2/**/*.py
     # Step 7: Run pylint and save output to post_traces
     - name: Run pylint for HW2
