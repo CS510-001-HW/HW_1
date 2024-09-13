@@ -10,11 +10,13 @@ Functions:
 - recombine(left_arr, right_arr): Merges two sorted arrays into one.
 """
 import subprocess
+
+
 def random_array(arr):
     for i, _ in enumerate(arr):
         try:
             shuffled_num = subprocess.run(
-             ["shuf", "-i1-20", "-n1"], capture_output=True, check=True)
+                ["shuf", "-i1-20", "-n1"], capture_output=True, check=True)
             arr[i] = int(shuffled_num.stdout)
         except subprocess.CalledProcessError as e:
             print(f"Error occurred: {e}")
@@ -22,9 +24,7 @@ def random_array(arr):
     return arr
 
 
-
 def merge_sort(arr):
-
     """
     Sorts the input array using the merge sort algorithm.
     Args:
@@ -36,12 +36,11 @@ def merge_sort(arr):
     if len(arr) <= 1:
         return arr
 
-    half = len(arr)//2
+    half = len(arr) // 2
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
 
 
 def recombine(left_arr, right_arr):
-
     """
     Merges two sorted arrays into one sorted array
     Args:
@@ -78,5 +77,3 @@ inp_arr = random_array([None] * 20)
 arr_out = merge_sort(inp_arr)
 
 print(arr_out)
-
-

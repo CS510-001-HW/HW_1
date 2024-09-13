@@ -26,7 +26,7 @@ jobs:
       # Step 4: Run AutoPep8 on HW2 to format the code
     - name: Run AutoPep8 for HW2
       run: |
-        autopep8 --in-place --aggressive --aggressive HW2/**/*.py
+        autopep8 --in-place --verbose --aggressive --aggressive HW2/**/*.py > HW2/post_traces/autopep8_trace.txt || true
     # Step 7: Run pylint and save output to post_traces
     - name: Run pylint for HW2
       run: |
