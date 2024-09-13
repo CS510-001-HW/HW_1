@@ -1,0 +1,23 @@
+************* Module hw2_debugging
+HW2/src/hw2_debugging.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module test.test_hw2
+HW2/test/test_hw2.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+HW2/test/test_hw2.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+HW2/test/test_hw2.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
+HW2/test/test_hw2.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+HW2/test/test_hw2.py:1:0: R0801: Similar lines in 2 files
+==hw2_debugging:[15:35]
+==rand:[29:38]
+    for i, _ in enumerate(arr):
+        try:
+            shuffled_num = subprocess.run(
+                ["shuf", "-i1-20", "-n1"], capture_output=True, check=True)
+            arr[i] = int(shuffled_num.stdout)
+        except subprocess.CalledProcessError as e:
+            print(f"Error occurred: {e}")
+            arr[i] = None
+    return arr (duplicate-code)
+
+-----------------------------------
+Your code has been rated at 8.93/10
+
