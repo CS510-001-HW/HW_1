@@ -1,4 +1,4 @@
-name: Tests and Static Analysis
+name: HW2 Pytest
 permissions:
   contents: write
 on: 
@@ -19,30 +19,18 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
-        pip install pytest pylint flake8 autopep8
+        pip install pytest
     - name: Run tests
       run: |
         pytest HW2/test/*
-      # Step 4: Run AutoPep8 on HW2 to format the code
-    - name: Run AutoPep8 for HW2
-      run: |
-        (autopep8 --in-place --verbose --aggressive --aggressive HW2/**/*.py) >> HW2/post_traces/autopep8_trace.txt 2>&1
-    # Step 7: Run pylint and save output to post_traces
-    - name: Run pylint for HW2
-      run: |
-        pylint HW2/**/*.py > HW2/post_traces/pylint_hw2_trace.txt || true
-
-    # Step 8: Run flake8 and save output to post_traces
-    - name: Run flake8 for HW2
-      run: |
-        (flake8 HW2/**/*.py && echo "No traces for flake8") > HW2/post_traces/flake8_hw2_trace.txt || true
-
+   
     - name: Commit pylint results
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
           git config --local user.name "ashwinramesh022"
           git config --local user.email "ashwinramesh.022@gmail.com"
+          git pull
           git add HW2/post_traces/*
           git commit -m "trace files"
           git push
