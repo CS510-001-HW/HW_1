@@ -4,9 +4,6 @@
 <a href="https://github.com/CS510-001-HW/HW_1/actions/workflows/flake8.yml/badge.svg"> <img src="https://github.com/CS510-001-HW/HW_1/actions/workflows/flake8.yml/badge.svg"></a>
 <a href="https://github.com/CS510-001-HW/HW_1/actions/workflows/pylint.yml/badge.svg"> <img src="https://github.com/CS510-001-HW/HW_1/actions/workflows/pylint.yml/badge.svg"></a>
 <a href="https://github.com/CS510-001-HW/HW_1/actions/workflows/pytest.yml/badge.svg"> <img src="https://github.com/CS510-001-HW/HW_1/actions/workflows/pytest.yml/badge.svg"></a>
-![AutoPep8](https://img.shields.io/badge/code%20style-autopep8-brightgreen)()
-![pylint](https://img.shields.io/badge/linter-pylint-yellow)
-![flake8](https://img.shields.io/badge/linter-flake8-blue)
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
