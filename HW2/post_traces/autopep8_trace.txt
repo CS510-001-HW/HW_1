@@ -43,3 +43,13 @@
 [file:HW2/src/hw2_debugging.py]
 --->  1 issue(s) to fix {'W291': {52}}
 --->  0 issue(s) to fix {}
+[file:HW2/test/test_hw2.py]
+--->  0 issue(s) to fix {}
+[file:HW2/src/rand.py]
+--->  1 issue(s) to fix {'E501': {32}}
+--->  0 issue(s) to fix {}
+[file:HW2/test/__init__.py]
+--->  0 issue(s) to fix {}
+[file:HW2/src/hw2_debugging.py]
+--->  1 issue(s) to fix {'E305': {74}}
+--->  0 issue(s) to fix {}
