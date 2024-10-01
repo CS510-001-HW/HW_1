@@ -1,2 +1,1 @@
 HW2/src/hw2_debugging.py:52:8: W291 trailing whitespace
-HW2/src/hw2_debugging.py:84:1: W391 blank line at end of file
