@@ -1,4 +1,6 @@
 ************* Module hw2_debugging
+HW2/src/hw2_debugging.py:52:7: C0303: Trailing whitespace (trailing-whitespace)
+HW2/src/hw2_debugging.py:82:0: C0305: Trailing newlines (trailing-newlines)
 HW2/src/hw2_debugging.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
 ************* Module test.test_hw2
 HW2/test/test_hw2.py:1:0: C0114: Missing module docstring (missing-module-docstring)
@@ -16,8 +18,19 @@ HW2/test/test_hw2.py:1:0: R0801: Similar lines in 2 files
         except subprocess.CalledProcessError as e:
             print(f"Error occurred: {e}")
             arr[i] = None
-    return arr (duplicate-code)
+    return arr
+
+
+def merge_sort(arr):
+    """
+    Sorts the input array using the merge sort algorithm.
+    Args:
+        arr (list): The array to be sorted.
+    Returns:
+        list: The sorted array.
+    """
+ (duplicate-code)
 
 -----------------------------------
-Your code has been rated at 8.93/10
+Your code has been rated at 8.57/10
 
