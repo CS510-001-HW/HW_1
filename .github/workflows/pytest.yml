@@ -23,16 +23,4 @@ jobs:
     - name: Run tests
       run: |
         pytest HW2/test/*
-   
-    - name: Commit pylint results
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-          git config --local user.name "ashwinramesh022"
-          git config --local user.email "ashwinramesh.022@gmail.com"
-          git pull
-          git add HW2/post_traces/*
-          git commit -m "trace files"
-          git push
-      
     
