@@ -1,1 +1,2 @@
-HW2/src/hw2_debugging.py:52:8: W291 trailing whitespace
+HW2/src/hw2_debugging.py:74:1: E305 expected 2 blank lines after class or function definition, found 1
+HW2/src/rand.py:32:80: E501 line too long (101 > 79 characters)
