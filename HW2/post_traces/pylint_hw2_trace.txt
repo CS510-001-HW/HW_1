@@ -1,6 +1,6 @@
 ************* Module hw2_debugging
 HW2/src/hw2_debugging.py:52:7: C0303: Trailing whitespace (trailing-whitespace)
-HW2/src/hw2_debugging.py:82:0: C0305: Trailing newlines (trailing-newlines)
+HW2/src/hw2_debugging.py:84:0: C0305: Trailing newlines (trailing-newlines)
 HW2/src/hw2_debugging.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
 ************* Module test.test_hw2
 HW2/test/test_hw2.py:1:0: C0114: Missing module docstring (missing-module-docstring)
