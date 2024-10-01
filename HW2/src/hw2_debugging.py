@@ -49,8 +49,7 @@ def recombine(left_arr, right_arr):
 
     Returns:
         list: The merged and sorted array.
-    """ 
-
+    """
     left_index = 0
     right_index = 0
     merge_arr = [None] * (len(left_arr) + len(right_arr))
@@ -71,7 +70,6 @@ def recombine(left_arr, right_arr):
         left_index += 1
 
     return merge_arr
-
 
 inp_arr = random_array([None] * 20)
 arr_out = merge_sort(inp_arr)

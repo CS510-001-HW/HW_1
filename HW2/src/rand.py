@@ -29,8 +29,7 @@ def random_array(arr):
     """
     for i, _ in enumerate(arr):
         try:
-            shuffled_num = subprocess.run(
-                ["shuf", "-i1-20", "-n1"], capture_output=True, check=True)
+            shuffled_num = subprocess.run(["shuf", "-i1-20", "-n1"], capture_output=True, check=True)
             arr[i] = int(shuffled_num.stdout)
         except subprocess.CalledProcessError as e:
             print(f"Error occurred: {e}")
