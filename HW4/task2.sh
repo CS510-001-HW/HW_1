@@ -1,22 +1,3 @@
 #!/bin/bash
-
-# Part a: List files containing "sample" and at least 3 occurrences of "CSC510"
-grep -rl 'sample' . | while read -r file; do
-    count=$(grep -o 'CSC510' "$file" | wc -l)
-    if [ "$count" -ge 3 ]; then
-        echo "$file:$count"  # Output filename and count separated by ':'
-    fi
-done | \
-
-# Part b: Sort by occurrence count and then by file size
-gawk -F: '{ print $1, $2 }' | while read -r file count; do
-    filesize=$(stat -c%s "$file")
-    echo "$file $count $filesize"
-done | sort -k2,2nr -k3,3nr | \
-
-# Part c: Substitute "file_" with "filtered_"
-while read -r file count filesize; do
-    new_file=$(echo "$file" | sed 's/file_/filtered_/')
-    echo "$new_file"
-done
+cd dataset1/ && grep -r -l "sample" | xargs grep -c "CSC510" | grep -E ":[3-9]$" | rev | sort -k1,1nr | rev | awk -F: '{print $1, $2}' | xargs -I{} sh -c 'file=$(echo "{}" | awk "{print \$1}"); count=$(echo "{}" | awk "{print \$2}"); size=$(ls -l "$file" | awk "{print \$5}"); echo "$file" "$count" "$size"' | sort -k2,2nr -k3,3nr | awk "{print \$1}" | sed 's/file_/filtered_/'
 
