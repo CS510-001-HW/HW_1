@@ -1,2 +1,3 @@
 #!/bin/bash
+#task3
 awk -F, 'NR > 1 { print $3, $5, $6, $7, $13 }' titanic.csv | sed 's/"//g' | sed 's/[[:space:]]*$//' | grep "S$" | rev | awk '{if ($3 == "elamef") $3 = "F"; else if ($3 == "elam") $3 = "M"; else if ($2 == "elamef") $2 = "F"; else if ($2 == "elam") $2 = "M"; print}' | rev | grep "^2" | sed 's/ S$//' | awk '{if ($NF ~ /^[0-9]+$/) {sum += $NF; count++}} END {if (count > 0) print sum / count; else print 0}'
